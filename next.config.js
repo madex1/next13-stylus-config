@@ -22,11 +22,12 @@ module.exports = {
             {
               loader: 'css-loader',
               options: {
-                /* here is your css-loader config */
-                modules: true,
+                url: false,
                 importLoaders: 2,
-                localIdentName: '[local]___[hash:base64:5]',
-                camelCase: true,
+                modules: {
+                  localIdentName: '[local]___[hash:base64:5]',
+                  exportLocalsConvention: "camelCase"
+                },
               }
             },
             {
